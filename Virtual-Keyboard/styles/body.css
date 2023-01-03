@@ -8,20 +8,22 @@ img{
   vertical-align: middle;
 }
 .keyboard-grid{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+  width: 80%;
+  top: 30vh;
+  left: 10%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   gap: 5px;
 }
 .space-outer-container{
   height: 5px;
   position: relative;
-  border: none; 
+  border: none;
+
 }
 .space-container{
   display: block;
@@ -30,11 +32,42 @@ img{
   top: 50%;
   left: 35%;
   position: absolute;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26); 
+  background-color: #464646;
 }
 .space-button{
   width: 230px;
 }
+/*search box styling*/
+.search-box{
+  position: fixed;
+  z-index: 100;
+  background: white;
+  border-radius: 1px;
+  width: 80%;
+  top: 20vh;
+  left: 10%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
 
+.search-box .search-content {
+  margin: 0;
+  padding: 1rem;
+  border-bottom: 1px solid red;
+  background: white;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+label{
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color:#464646;
+}
+input{
+  margin-right: 15px;
+  margin-left: 15px;
+  padding: 6px 6px 6px 6px;
+}
 /*this is just cosmetic of the said button no reaL affect in how it is layed out*/
 .event-button{
   padding: 5px 10px;
