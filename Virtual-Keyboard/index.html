@@ -6,15 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Virtual KeyBoard</title>
   <link rel="stylesheet" href="/Virtual-Keyboard/styles/body.css">
+  <script src="/Virtual-Keyboard/scripts/app.js"defer></script>
 </head>
 <body>
   <header>
     <h2>Welcome to the Pokedex</h2>
   </header>
-  <div class="search-box">
+  <div class="search-box" id="search-box">
     <div class="search-content">
       <label for="name">Pokemon name :</label>
-      <input type="text" name="name" id="pokeName"/>
+      <input type="text" class="inputValue"  placeholder="Enter a pokemon" id="pokeName"/>
       <label for="ability">Pokemon Abilitys :</label>
       <input type="text" name="ability" id="pokeAbility">
     </div> 
@@ -60,7 +61,7 @@
       <button class="letter-button">M</button>
       <div class="space-outer-container">
         <div class="space-container">
-          <button class="space-button">
+          <button class="space-button" id="space-button">
             <img src="./icons/space-bar-1439880-1214373.png" alt="">
           </button>
         </div>
