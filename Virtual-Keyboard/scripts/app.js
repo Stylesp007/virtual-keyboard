@@ -2,8 +2,8 @@ const searchPokemon = document.getElementById('search-box');
 const USERINPUT = document.querySelector('.inputValue');
 const spaceBtn = document.querySelector('.space-button')
 
-// start off with binding the input fields to the pokemon api
-
+// CREATE AND BIND A BTN THAT SEARCHS FO THIS POKEMON
+// GET A SHORT DESCRIPTION OF THE POKEMON AND ITS ABILITYS
 spaceBtn.addEventListener('click', () => {
   fetch(`https://pokeapi.co/api/v2/pokemon/`+USERINPUT.value)
     .then(response => response.json())
