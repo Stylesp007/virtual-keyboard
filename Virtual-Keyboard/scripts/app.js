@@ -9,13 +9,6 @@ spaceBtn.addEventListener('click', () => {
   fetch(`https://pokeapi.co/api/v2/pokemon/`+USERINPUT.value)
     .then(response => response.json())
     .then(data => {
-      let pokeMoves = [];
-      for(i = 0; i === 5; i++){
-        for(let move of data['moves'][i]['move']['name']) {
-          pokeMoves.push(move);
-        }
-        
-      }
       
       // const ability = data['abilities'][1]['ability']['name'];
       // const height = `${data['height']}'0`;
