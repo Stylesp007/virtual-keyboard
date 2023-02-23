@@ -7,57 +7,20 @@ img{
   width: 40px;
   vertical-align: middle;
 }
-.keyboard-grid{
-  position: fixed;
-  display: grid;
-  grid-template-columns: 1fr;
-  column-gap: 16px;
-  row-gap: 40px;
-  width: 80%;
-  top: 30vh;
-  left: 10%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  gap: 5px;
-}
-.space-outer-container{
-  height: 5px;
-  position: relative;
-  border: none;
 
-}
-.space-container{
-  display: block;
-  align-content: center;
-  margin: 0;
-  top: 50%;
-  left: 35%;
-  position: absolute;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26); 
-  background-color: #464646;
-}
-.space-button{
-  width: 230px;
-}
 /*search box styling*/
 .search-box{
-  position: fixed;
-  z-index: 100;
+  display: flex;
   background: white;
   border-radius: 1px;
-  width: 80%;
-  top: 20vh;
-  left: 10%;
+  width: 39%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 
-.search-box .search-content {
-  margin: 0;
-  padding: 1rem;
-  border-bottom: 1px solid red;
-  background: white;
-  color: white;
-  border-radius: 10px 10px 0 0;
+.search-content{
+  padding: 30px 15px 30px 15px;
 }
+
 label{
   font-weight: bold;
   margin: 0.5rem 0;
@@ -68,31 +31,6 @@ input{
   margin-left: 15px;
   padding: 6px 6px 6px 6px;
 }
-/*this is just cosmetic of the said button no reaL affect in how it is layed out*/
-.event-button{
-  padding: 5px 10px;
+#search-pokemon{
+  padding: 10px 15px 10px 15px;
 }
-.keys-row-1 .button {
-  padding: 15px 32px;
-  text-align: center;
-  margin-top: 20px;
-}
-.letter-button:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-.letter-button:active,
-.event-button:active,
-.space-button:active{
-  background-color: #3e8e41;
-  box-shadow: 2px 2px #666;
-  transform: translate(4px);
-}
-.letter-button{
-  font-weight: bold;
-  font-size: large;
-  padding: 15px 22px;
-  border: none;
-  background-color: #4CAF50;
-  outline: none;
-}
-
