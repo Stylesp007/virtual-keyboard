@@ -24,7 +24,7 @@ const pokemonHandler = () => {
     //   </div>`;
     //   }
     }
-    console.log(pokeObj.pokemonName);
+    console.log(pokeObj.pokemonName.toString());
     console.log(pokeObj.pokemonHeight);
     console.log(pokeObj.pokemonWeight);
     
