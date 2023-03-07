@@ -2,22 +2,20 @@ body{
   background-color: #7effb2;
 }
 
-img{
-  height: 40px;
-  width: 40px;
-  vertical-align: middle;
-}
+
 
 /*search box styling*/
 .search-box{
   display: flex;
   background: white;
   border-radius: 1px;
-  width: 39%;
+  width: 49%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 
 .search-content{
+  display: flex;
+  justify-content: space-between;
   padding: 30px 15px 30px 15px;
 }
 
@@ -33,4 +31,29 @@ input{
 }
 #search-pokemon{
   padding: 10px 15px 10px 15px;
+}
+
+/*pokemon display styling*/
+.pokemon-card {
+  margin-top: 20px;
+  padding: 20px 15px 20px 15px;
+  display: none;
+  width: 20%;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 30px;
+}
+.pokemon-card.visible{
+  display: block;
+}
+.pokemon-name {
+  color: red;
+  font-weight: bolder;
+}
+
+img {
+height: 60px;
+width:60px;
 }

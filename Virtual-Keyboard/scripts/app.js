@@ -1,6 +1,34 @@
-
 const pokeSearch = document.getElementById('search-pokemon');
 
+const POKEMON = [];
+
+const pokemonCards = () => {
+  const pokeCards = document.getElementById('pokecard');
+
+  if(!POKEMON){
+    pokeCards.classList.remove('visible');
+    return;
+  } else {
+    pokeCards.classList.add('visible');
+  }
+  pokeCards.innerHTML = '';
+  console.log(POKEMON);
+  POKEMON.forEach((pokemon) => {
+    const pokemonEl = document.createElement('li');
+    pokemonEl.className = 'poke-list-items';
+    pokemonEl.innerHTML =`
+    <div>
+      <div class="pokemon-item__content">
+        <h2>pokemon Height:${pokemon.pokeObj.pokemonHeight}</h2>
+        <h3> Description of ${pokemon.pokeObj.pokeName}</h3>
+        <p>${pokemon.pokeObj.pokeName} abilitys</p>
+      </div>
+    </div>
+    `
+    return pokemonEl;
+  })
+  
+};
 
 const pokemonHandler = () => {
   const pokeName = document.getElementById('pokeName').value;
@@ -8,29 +36,18 @@ const pokemonHandler = () => {
 
   fetch(`https://pokeapi.co/api/v2/pokemon/${pokeName}`).then(response => response.json()).then((data) => {
     const pokeObj = {
-      pokemonName:[data.name],
-      pokemonHeight:[data.height],
-      pokemonWeight:[data.weight]
-      // pokemmonImg:[data.sprites.official-artwork.front_default],
-
-    //   render() {
-    //   const pokeEl = document.createElement('img');
-    //   const pokeImg = data.sprites.front_default;
-    // // console.log(data);
-
-    //   pokeEl.innerHTML = `
-    //   <div>
-    //     <img src="${pokeImg}" alt = "${data.name}"/>
-    //   </div>`;
-    //   }
+      pokemonName:pokeName,
+      pokemonHeight:data.height,
+      pokemonWeight:data.weight,
+      pokemonImg:data.sprites['back_default']
     }
-    console.log(pokeObj.pokemonName.toString());
-    console.log(pokeObj.pokemonHeight);
-    console.log(pokeObj.pokemonWeight);
-    
+
+    POKEMON.push(pokeObj);
+    pokemonCards();
   })
   
-  
-};
+  document.getElementById('pokeName').value = '';
+}; 
 
 pokeSearch.addEventListener('click', pokemonHandler);
+console.log(POKEMON);
